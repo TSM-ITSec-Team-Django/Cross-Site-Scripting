@@ -1,9 +1,9 @@
 <html lang="en-AU">
 <body>
 <form method="get">
-    <label for="query">Search: </label>
+    <label for="query">Your specified value: </label>
     <input type="text" id="query" name="query" />
-    <input type="submit" value="Search" />
+    <input type="submit" value="Multiply with 13" />
 </form>
 
 <span id="search-query" ></span>
@@ -14,7 +14,7 @@
     var searchParams = new URLSearchParams(document.location.search);
     if (searchParams.has("query"))
     {
-        document.getElementById("search-query").innerHTML = "You searched for " + searchParams.get("query")
+        document.getElementById("search-query").innerHTML = "Multiplying your specified value with 13: " + eval( "13 * " + searchParams.get("query"));
     }
 </script>
 </body>
