@@ -61,4 +61,9 @@
 
 ## Connect to Django Project
 * Django is running on http://localhost:8000
-* There is a simple search form
+* There is a calculation form
+
+## Cross-Site-Scripting
+* Cross-Site-Scripting
+* To perform Cross-Site-Scripting put a JavaScript command into the text field
+* e.g. alert("XSS")
