@@ -1,6 +1,4 @@
 from django import forms
 
-
-class Login(forms.Form):
-    username = forms.CharField(label='Username')
-    password = forms.CharField(label='Password')
+class SearchForm(forms.Form):
+    your_name = forms.CharField(label='', max_length=100)
