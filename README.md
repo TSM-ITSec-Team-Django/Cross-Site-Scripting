@@ -61,4 +61,3 @@
 
 ## Connect to Django Project
 * Django is running on http://localhost:8000
-* There is a simple search form

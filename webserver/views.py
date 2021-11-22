@@ -23,3 +23,7 @@ def search(request, autoescape):
         return render(request, './searchwithautoescape.html', {'form': form, 'search_value': ""})
     else:
         return render(request, './searchwithoutautoescape.html', {'form': form, 'search_value': ""})
+
+
+def eval(request):
+    return render(request, './eval.html')

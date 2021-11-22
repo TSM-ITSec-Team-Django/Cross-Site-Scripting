@@ -6,3 +6,19 @@
 <a href="http://localhost:8000/searchwithoutautoescape">
     <h3>without autoescape</h3>
 </a>
+<p></p>
+<h2>Other:</h2>
+<a href="http://localhost:8000/eval">
+    <h3>eval(...)</h3>
+</a>
+<p></p>
+<a href="http://localhost:8000/eval?query=alert(%22not%20Django%27s%20fault%22)">
+    <h3>malicious link</h3>
+</a>
+<p></p>
+<h2>Django documentation:</h2>
+<a href="https://docs.djangoproject.com/en/3.2/ref/templates/language/#automatic-html-escaping">
+    <h3>Automatic escaping</h3>
+</a>
+<p>"Again, we stress that this behavior is on by default. If you’re using Django’s template system, you’re protected."
+</p>

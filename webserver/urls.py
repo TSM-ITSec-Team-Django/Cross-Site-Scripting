@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.home),
     path('searchwithautoescape', views.search, {'autoescape': True}),
     path('searchwithoutautoescape', views.search, {'autoescape': False}),
+    path('eval', views.eval),
 ]
