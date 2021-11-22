@@ -2,20 +2,24 @@ from django.shortcuts import render
 
 from .forms import SearchForm
 
-def search(request):
-    # if this is a POST request we need to process the form data
-    if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
-        form = SearchForm(request.POST)
-        # check whether it's valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-            return render(request, './search.html', {'form': form, 'search_value': request.POST['your_name']})
 
-    # if a GET (or any other method) we'll create a blank form
+def home(request):
+    return render(request, './home.html')
+
+
+def search(request, autoescape):
+    if request.method == 'POST':
+        form = SearchForm(request.POST)
+        if form.is_valid():
+            if (autoescape):
+                return render(request, './searchwithautoescape.html', {'form': form, 'search_value': request.POST['your_name']})
+            else:
+                return render(request, './searchwithoutautoescape.html', {'form': form, 'search_value': request.POST['your_name']})
+
     else:
         form = SearchForm()
 
-    return render(request, './search.html', {'form': form, 'search_value': ""})
+    if (autoescape):
+        return render(request, './searchwithautoescape.html', {'form': form, 'search_value': ""})
+    else:
+        return render(request, './searchwithoutautoescape.html', {'form': form, 'search_value': ""})

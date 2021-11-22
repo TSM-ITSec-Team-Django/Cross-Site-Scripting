@@ -1,0 +1,8 @@
+<form action="/searchwithoutautoescape" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Search">
+</form>
+{% autoescape off %}
+<p>Input without autoescape: {{ search_value }}</p>
+{% endautoescape %}
